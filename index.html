@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopi & Rasa — Premium Coffee & Food</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">Kopi <em>&</em> Rasa</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#proses">Proses</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-search" aria-label="Cari">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-cart" id="cartBtn" aria-label="Keranjang">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="btn-nav-cta">Pesan Sekarang</button>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="steam-container" aria-hidden="true">
+      <div class="steam steam-1"></div>
+      <div class="steam steam-2"></div>
+      <div class="steam steam-3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Dari Kebun ke Cangkir Anda</p>
+      <h1 class="hero-headline">
+        Kopi yang<br />
+        <em>Bercerita</em>
+      </h1>
+      <p class="hero-sub">
+        Pilihan biji kopi single origin terbaik dari Aceh, Toraja, dan Flores —<br class="desktop-br" />
+        disangrai dengan penuh perhatian untuk tiap tegukan yang sempurna.
+      </p>
+      <div class="hero-actions">
+        <a href="#produk" class="btn-primary">Jelajahi Koleksi</a>
+        <a href="#proses" class="btn-ghost">Cerita Kami</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">12+</span>
+          <span class="stat-label">Origin Kopi</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">4.9★</span>
+          <span class="stat-label">Rating Pelanggan</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">50k+</span>
+          <span class="stat-label">Pesanan Terkirim</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="cup-wrapper">
+        <div class="cup-glow"></div>
+        <div class="coffee-cup">
+          <div class="cup-body">
+            <div class="coffee-surface">
+              <div class="latte-art"></div>
+            </div>
+          </div>
+          <div class="cup-handle"></div>
+          <div class="cup-saucer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Single Origin Arabica</span>
+      <span class="sep">✦</span>
+      <span>Cold Brew Siap Minum</span>
+      <span class="sep">✦</span>
+      <span>Pastry Artisan</span>
+      <span class="sep">✦</span>
+      <span>Pengiriman Same Day</span>
+      <span class="sep">✦</span>
+      <span>Roasted Fresh Weekly</span>
+      <span class="sep">✦</span>
+      <span>Single Origin Arabica</span>
+      <span class="sep">✦</span>
+      <span>Cold Brew Siap Minum</span>
+      <span class="sep">✦</span>
+      <span>Pastry Artisan</span>
+      <span class="sep">✦</span>
+      <span>Pengiriman Same Day</span>
+      <span class="sep">✦</span>
+      <span>Roasted Fresh Weekly</span>
+      <span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- KATEGORI -->
+  <section class="kategori-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Temukan Pilihan Anda</p>
+        <h2 class="section-title">Kategori Unggulan</h2>
+      </div>
+      <div class="kategori-grid">
+        <div class="kategori-card active" data-filter="semua">
+          <div class="kat-icon">☕</div>
+          <span>Semua</span>
+        </div>
+        <div class="kategori-card" data-filter="kopi-biji">
+          <div class="kat-icon">🫘</div>
+          <span>Kopi Biji</span>
+        </div>
+        <div class="kategori-card" data-filter="ready-drink">
+          <div class="kat-icon">🧋</div>
+          <span>Ready Drink</span>
+        </div>
+        <div class="kategori-card" data-filter="pastry">
+          <div class="kat-icon">🥐</div>
+          <span>Pastry</span>
+        </div>
+        <div class="kategori-card" data-filter="snack">
+          <div class="kat-icon">🍪</div>
+          <span>Snack</span>
+        </div>
+        <div class="kategori-card" data-filter="alat">
+          <div class="kat-icon">⚗️</div>
+          <span>Alat Seduh</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK -->
+  <section class="produk-section" id="produk">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Pilihan Terbaik</p>
+        <h2 class="section-title">Koleksi Premium</h2>
+      </div>
+      <div class="produk-grid" id="produkGrid">
+
+        <!-- KOPI BIJI -->
+        <div class="produk-card" data-kategori="kopi-biji">
+          <div class="produk-badge">Best Seller</div>
+          <div class="produk-img-wrap">
+            <div class="produk-img-placeholder kopi-1">
+              <div class="img-inner">🫘</div>
+            </div>
+            <button class="quick-add" data-id="1" data-name="Gayo Arabica Premium" data-price="185000">+ Keranjang</button>
+          </div>
+          <div class="produk-info">
+            <div class="produk-origin">Aceh Tengah</div>
+            <h3 class="produk-name">Gayo Arabica Premium</h3>
+            <p class="produk-desc">Floral, caramel, dark chocolate. Medium roast, 250gr.</p>
+            <div class="produk-footer">
+              <span class="produk-harga">Rp 185.000</span>
+              <div class="produk-rating">★ 4.9 <span>(128)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="produk-card" data-kategori="kopi-biji">
+          <div class="produk-badge new">New</div>
+          <div class="produk-img-wrap">
+            <div class="produk-img-placeholder kopi-2">
+              <div class="img-inner">☕</div>
+            </div>
+            <button class="quick-add" data-id="2" data-name="Toraja Kalosi Dark" data-price="210000">+ Keranjang</button>
+          </div>
+          <div class="produk-info">
+            <div class="produk-origin">Sulawesi Selatan</div>
+            <h3 class="produk-name">Toraja Kalosi Dark</h3>
+            <p class="produk-desc">Earthy, spicy, full body. Dark roast, 250gr.</p>
+            <div class="produk-footer">
+              <span class="produk-harga">Rp 210.000</span>
+              <div class="produk-rating">★ 4.8 <span>(96)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="produk-card" data-kategori="kopi-biji">
+          <div class="produk-img-wrap">
+            <div class="produk-img-placeholder kopi-3">
+              <div class="img-inner">🫘</div>
+            </div>
+            <button class="quick-add" data-id="3" data-name="Flores Bajawa Natural" data-price="195000">+ Keranjang</button>
+          </div>
+          <div class="produk-info">
+            <div class="produk-origin">Flores, NTT</div>
+            <h3 class="produk-name">Flores Bajawa Natural</h3>
+            <p class="produk-desc">Berry, wine, bright acidity. Light roast, 250gr.</p>
+            <div class="produk-footer">
+              <span class="produk-harga">Rp 195.000</span>
+              <div class="produk-rating">★ 4.9 <span>(74)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- READY DRINK -->
+        <div class="produk-card" data-kategori="ready-drink">
+          <div class="produk-badge">Popular</div>
+          <div class="produk-img-wrap">
+            <div class="produk-img-placeholder drink-1">
+              <div class="img-inner">🧋</div>
+            </div>
+            <button class="quick-add" data-id="4" data-name="Cold Brew Gayo 500ml" data-price="55000">+ Keranjang</button>
+          </div>
+          <div class="produk-info">
+            <div class="produk-origin">Ready to Drink</div>
+            <h3 class="produk-name">Cold Brew Gayo 500ml</h3>
+            <p class="produk-desc">Diseduh 24 jam, smooth & refreshing. Tanpa gula.</p>
+            <div class="produk-footer">
+              <span class="produk-harga">Rp 55.000</span>
+              <div class="produk-rating">★ 4.7 <span>(203)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="produk-card" data-kategori="ready-drink">
+          <div class="produk-img-wrap">
+            <div class="produk-img-placeholder drink-2">
+              <div class="img-inner">🍶</div>
+            </div>
+            <button class="quick-add" data-id="5" data-name="Latte Aren Botol 350ml" data-price="42000">+ Keranjang</button>
+          </div>
+          <div class="produk-info">
+            <div class="produk-origin">Ready to Drink</div>
+            <h3 class="produk-name">Latte Aren Botol 350ml</h3>
+            <p class="produk-desc">Espresso + susu segar + gula aren Lombok.</p>
+            <div class="produk-footer">
+              <span class="produk-harga">Rp 42.000</span>
+              <div class="produk-rating">★ 4.8 <span>(167)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASTRY -->
+        <div class="produk-card" data-kategori="pastry">
+          <div class="produk-badge">Artisan</div>
+          <div class="produk-img-wrap">
+            <div class="produk-img-placeholder pastry-1">
+              <div class="img-inner">🥐</div>
+            </div>
+            <button class="quick-add" data-id="6" data-name="Croissant Mentega Premium" data-price="38000">+ Keranjang</button>
+          </div>
+          <div class="produk-info">
+            <div class="produk-origin">Artisan Bakery</div>
+            <h3 class="produk-name">Croissant Mentega Premium</h3>
+            <p class="produk-desc">72-jam fermentasi, mentega Prancis, flaky & buttery.</p>
+            <div class="produk-footer">
+              <span class="produk-harga">Rp 38.000</span>
+              <div class="produk-rating">★ 4.9 <span>(89)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="produk-card" data-kategori="pastry">
+          <div class="produk-img-wrap">
+            <div class="produk-img-placeholder pastry-2">
+              <div class="img-inner">🍞</div>
+            </div>
+            <button class="quick-add" data-id="7" data-name="Pain au Chocolat" data-price="42000">+ Keranjang</button>
+          </div>
+          <div class="produk-info">
+            <div class="produk-origin">Artisan Bakery</div>
+            <h3 class="produk-name">Pain au Chocolat</h3>
+            <p class="produk-desc">Dark chocolate 70% Valrhona dalam pastry berlapis.</p>
+            <div class="produk-footer">
+              <span class="produk-harga">Rp 42.000</span>
+              <div class="produk-rating">★ 4.8 <span>(61)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SNACK -->
+        <div class="produk-card" data-kategori="snack">
+          <div class="produk-badge">Limited</div>
+          <div class="produk-img-wrap">
+            <div class="produk-img-placeholder snack-1">
+              <div class="img-inner">🍪</div>
+            </div>
+            <button class="quick-add" data-id="8" data-name="Coffee Butter Cookies 200gr" data-price="75000">+ Keranjang</button>
+          </div>
+          <div class="produk-info">
+            <div class="produk-origin">Homemade</div>
+            <h3 class="produk-name">Coffee Butter Cookies</h3>
+            <p class="produk-desc">Cookies renyah dengan espresso shot & dark chocolate chip. 200gr.</p>
+            <div class="produk-footer">
+              <span class="produk-harga">Rp 75.000</span>
+              <div class="produk-rating">★ 4.9 <span>(44)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ALAT -->
+        <div class="produk-card" data-kategori="alat">
+          <div class="produk-img-wrap">
+            <div class="produk-img-placeholder alat-1">
+              <div class="img-inner">⚗️</div>
+            </div>
+            <button class="quick-add" data-id="9" data-name="V60 Ceramic White" data-price="320000">+ Keranjang</button>
+          </div>
+          <div class="produk-info">
+            <div class="produk-origin">Brewing Equipment</div>
+            <h3 class="produk-name">V60 Ceramic White</h3>
+            <p class="produk-desc">Hario V60 keramik, ekstraksi merata, aroma maksimal.</p>
+            <div class="produk-footer">
+              <span class="produk-harga">Rp 320.000</span>
+              <div class="produk-rating">★ 4.7 <span>(55)</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="produk-more">
+        <button class="btn-outline">Lihat Semua Produk</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER CTA -->
+  <section class="banner-cta">
+    <div class="container">
+      <div class="banner-inner">
+        <div class="banner-text">
+          <p class="banner-eyebrow">Penawaran Spesial</p>
+          <h2 class="banner-title">Gratis Ongkir<br /><em>Minimal Rp 200.000</em></h2>
+          <p class="banner-desc">Berlaku untuk seluruh wilayah Jabodetabek & pengiriman ekspres same-day.</p>
+          <a href="#produk" class="btn-primary">Belanja Sekarang</a>
+        </div>
+        <div class="banner-decor" aria-hidden="true">
+          <div class="bd-ring bd-ring-1"></div>
+          <div class="bd-ring bd-ring-2"></div>
+          <div class="bd-ring bd-ring-3"></div>
+          <span class="bd-icon">☕</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROSES -->
+  <section class="proses-section" id="proses">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Dari Asal Usul</p>
+        <h2 class="section-title">Perjalanan Setiap Biji</h2>
+      </div>
+      <div class="proses-timeline">
+        <div class="proses-item">
+          <div class="proses-icon">🌱</div>
+          <div class="proses-content">
+            <h3>Dipetik Tangan</h3>
+            <p>Petani kami memetik hanya buah kopi yang benar-benar matang sempurna, satu per satu, di ketinggian 1.200–1.600 mdpl.</p>
+          </div>
+        </div>
+        <div class="proses-connector"></div>
+        <div class="proses-item">
+          <div class="proses-icon">☀️</div>
+          <div class="proses-content">
+            <h3>Proses Natural</h3>
+            <p>Dijemur utuh selama 3–4 minggu di raised bed, memberi profil rasa fruity yang kaya dan kompleks.</p>
+          </div>
+        </div>
+        <div class="proses-connector"></div>
+        <div class="proses-item">
+          <div class="proses-icon">🔥</div>
+          <div class="proses-content">
+            <h3>Disangrai Segar</h3>
+            <p>Roasting dilakukan tiap minggu dalam batch kecil untuk menjaga kesegaran dan konsistensi rasa setiap order.</p>
+          </div>
+        </div>
+        <div class="proses-connector"></div>
+        <div class="proses-item">
+          <div class="proses-icon">📦</div>
+          <div class="proses-content">
+            <h3>Kemas & Kirim</h3>
+            <p>Dikemas dengan degassing valve untuk menjaga aroma, dan dikirim dalam 24 jam setelah roasting selesai.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testi-section" id="tentang">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Kata Mereka</p>
+        <h2 class="section-title">Pelanggan Setia Kami</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Gayo Arabica-nya luar biasa. Floral notes-nya begitu clean, perfect untuk pour over pagi hari. Sudah jadi langganan tetap saya."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">AR</div>
+            <div>
+              <div class="testi-name">Arini R.</div>
+              <div class="testi-role">Home Barista, Jakarta</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card featured">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Cold brew-nya paling enak yang pernah saya coba. Smooth banget, tidak ada rasa pahit. Croissant-nya juga surga dunia."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">DS</div>
+            <div>
+              <div class="testi-name">Dimas S.</div>
+              <div class="testi-role">Coffee Enthusiast, Bandung</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Packaging premium, pengiriman cepat, dan yang paling penting — kopinya memang enak. Toraja Dark jadi favorit kantor kami."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">MF</div>
+            <div>
+              <div class="testi-name">Maya F.</div>
+              <div class="testi-role">Office Manager, Surabaya</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="nl-icon" aria-hidden="true">✉️</div>
+        <h2 class="nl-title">Jadilah Yang Pertama Tahu</h2>
+        <p class="nl-sub">Dapatkan info produk baru, promo eksklusif, dan tips menyeduh kopi langsung di inbox Anda.</p>
+        <form class="nl-form" onsubmit="handleNewsletter(event)">
+          <input type="email" class="nl-input" placeholder="email@anda.com" required />
+          <button type="submit" class="btn-primary">Daftar Gratis</button>
+        </form>
+        <p class="nl-note">Tidak ada spam. Berhenti kapan saja.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontak">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo">
+            <span class="logo-icon">☕</span>
+            <span class="logo-text">Kopi <em>&</em> Rasa</span>
+          </a>
+          <p class="footer-tagline">Kopi premium dari tangan petani Indonesia ke meja Anda.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram" class="social-link">IG</a>
+            <a href="#" aria-label="TikTok" class="social-link">TK</a>
+            <a href="#" aria-label="WhatsApp" class="social-link">WA</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Produk</h4>
+          <ul>
+            <li><a href="#">Kopi Biji</a></li>
+            <li><a href="#">Ready Drink</a></li>
+            <li><a href="#">Pastry & Snack</a></li>
+            <li><a href="#">Alat Seduh</a></li>
+            <li><a href="#">Paket Hadiah</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informasi</h4>
+          <ul>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Blog Kopi</a></li>
+            <li><a href="#">Kebun Partner</a></li>
+            <li><a href="#">Karir</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Bantuan</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Cara Pemesanan</a></li>
+            <li><a href="#">Pengiriman</a></li>
+            <li><a href="#">Return & Refund</a></li>
+            <li><a href="mailto:halo@kopirasa.id">halo@kopirasa.id</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Kopi & Rasa. Dengan ❤️ dari Indonesia.</p>
+        <div class="footer-payment">
+          <span>BCA</span><span>Mandiri</span><span>GoPay</span><span>OVO</span><span>QRIS</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Keranjang Belanja</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <span>🛒</span>
+        <p>Keranjang kosong</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">Rp 0</span>
+      </div>
+      <button class="btn-primary cart-checkout">Lanjut Checkout</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
